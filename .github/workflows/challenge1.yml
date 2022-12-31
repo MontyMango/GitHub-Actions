@@ -3,28 +3,29 @@ name: Challenge_1
 on: [push]
 
 jobs:
-  job1:
-    name: Ubuntu latest Date
+  Ubuntu:
+    name: Ubuntu latest
     runs-on: ubuntu-latest
     steps:
       - name: print date
         run: date
-  job2:
-    name: Windows latest Date
+  
+  Windows:
+    name: Windows latest
     runs-on: windows-latest
     steps:
       - name: Get-Date
         run: Get-Date
   
-  job3:
-    name: MacOS latest Date
+  MacOS:
+    name: MacOS latest
     runs-on: macos-latest
     steps:
       - name: print date
         run: date
 
-  job4:
-    name: MacOS Monterey 12 Date
+  MacOSMonterey:
+    name: MacOS 12 Monterey
     runs-on: macos-12
     needs: [job1, job2, job3]
     steps:
