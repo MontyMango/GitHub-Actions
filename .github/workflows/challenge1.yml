@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print date
-        run: echo date
+        run: date
   job2:
     name: Windows latest Date
     runs-on: windows-latest
@@ -21,7 +21,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: print date
-        run: echo date
+        run: date
 
   job4:
     name: MacOS Monterey 12 Date
@@ -29,4 +29,4 @@ jobs:
     needs: [job1, job2, job3]
     steps:
       - name: print date
-        run: echo date
+        run: date
