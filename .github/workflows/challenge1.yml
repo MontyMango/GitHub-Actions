@@ -1,6 +1,6 @@
 name: Challenge_1
 
-on: [push]
+on: [issues]
 
 jobs:
   Ubuntu:
