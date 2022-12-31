@@ -1,7 +1,7 @@
 name: first
 
 
-on: push
+on: issues
 
 jobs:
   job1:
