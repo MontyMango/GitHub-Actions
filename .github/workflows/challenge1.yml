@@ -1,0 +1,32 @@
+name: Challenge_1
+
+on: [push]
+
+jobs:
+  job1:
+    name: Ubuntu latest Date
+    runs-on: ubuntu-latest
+    steps:
+      - name: print date
+      - run: echo date
+  job2:
+    name: Windows latest Date
+    runs-on: windows-latest
+    steps:
+      - name: Get-Date
+      - run: Get-Date
+  
+  job3:
+    name: MacOS latest Date
+    runs-on: macos-latest
+    steps:
+      - name: print date
+      - run: echo date
+
+  job4:
+    name: MacOS Monterey 12 Date
+    runs-on: macos-12
+    needs: [job1, job2, job3]
+    steps:
+      - name: print date
+      - run: echo date
