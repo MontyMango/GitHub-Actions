@@ -25,3 +25,7 @@ jobs:
       - name: Create an artifact
         env: 
           PYTHON_OUTPUT: 'hello_output'
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: ./${{env.PYTHON_OUTPUT}}
