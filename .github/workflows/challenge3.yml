@@ -1,6 +1,9 @@
 name: 'CI/CD Pipeline'
 on: [push]
 
+env:
+  PYTHON_OUTPUT: ''
+
 jobs:
   Test:
       name: Testing
@@ -11,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
     
       - name: Run Python Script
-        run: python hello.py > hello_output
+        run: python hello.py > ${{env.PYTHON_OUTPUT}}
   
   Build:
       name: Build
@@ -23,8 +26,6 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Create an artifact
-        env: 
-          PYTHON_OUTPUT: 'hello_output'
         uses: actions/upload-artifact@v2
         with:
           name: output
