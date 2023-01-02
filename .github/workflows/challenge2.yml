@@ -14,5 +14,4 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v1.0.0
         with:
-          name: Workplace Name
-          content: ${{ env.WORKPLACE_NAME}}
+          name: ${{ env.WORKPLACE_NAME}}
