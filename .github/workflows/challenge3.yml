@@ -1,0 +1,21 @@
+name: 'CI/CD Pipeline'
+on: [push]
+
+jobs:
+  Test:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: Run Python Script
+      run: python hello.py > hello_output
+  
+  Build:
+    needs: [Test]
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: Create an artifact
+      env: 
+        PYTHON_OUTPUT: 'hello_output'
+        
+      
