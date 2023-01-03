@@ -7,3 +7,5 @@ jobs:
     steps:
       - name: "MontyMango's Hello World Application"
         uses: "MontyMango/GitHub_Custom_Action@main"
+        
+        
