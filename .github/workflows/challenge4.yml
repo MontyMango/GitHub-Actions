@@ -3,6 +3,7 @@ on: [push]
 
 jobs:
   custom_action:
+    runs-on: ubuntu:latest
     steps:
       - name: "MontyMango's Hello World Application"
         uses: "MontyMango/GitHub_Custom_Action@main"
