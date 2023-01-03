@@ -5,7 +5,7 @@ jobs:
   custom_action:
     runs-on: ubuntu-latest
     steps:
-      - name: "MontyMango's Hello World Application"
-        uses: "MontyMango/GitHub_Custom_Action@main"
+      - uses: actions/checkout@v2
+      - uses: MontyMango/GitHub_Custom_Action@main
         
         
